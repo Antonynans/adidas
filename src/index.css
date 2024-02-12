@@ -39,6 +39,10 @@ h2 {
   transform: scale(1.15);
   overflow: hidden !important;
 }
+.btn-hover {
+  transform: scale(1.15);
+  transition: all 0.4s ease 0s !important;
+}
 .flip_image {
   transform: scaleX(-1);
 }
@@ -53,16 +57,3 @@ h2 {
   border: 1.5px solid black;
   color: black;
 }
-
-/* button {
-  cursor: pointer;
-} */
-/* 
-.shadow-3xl {
-  --tw-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  --tw-shadow-colored: 0 10px 40px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
- */

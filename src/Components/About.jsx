@@ -1,7 +1,17 @@
+import { useState } from "react";
 import { HiCheck } from "react-icons/hi";
 
 /* eslint-disable react/no-unescaped-entities */
 export default function About() {
+  const [imageUrl, setImageUrl] = useState("");
+
+  const handleButtonHover = (url) => {
+    setImageUrl(url);
+  };
+  const handleButtonLeave = () => {
+    setImageUrl("");
+  };
+
   return (
     <main className="bg-[#f9f9f9]">
       <div className="max-w-[1600px] mx-auto lg:pt-24" id="about">
@@ -64,8 +74,20 @@ export default function About() {
       </div>
       <div className="bg-slide py-40 lg:overflow-hidden" id="features">
         <div className="flex flex-1 items-center  ">
-          <img src="/red_shoe.png" alt="red shoe" className="w-1/3 hoverBtn" />
-          <div className="w-1/3 hoverBtn relative py-8">
+          <img
+            src="/red_shoe.png"
+            alt="red shoe"
+            className={`${
+              imageUrl === "red_shoe" ? "w-1/3 hoverBtn btn-hover" : "w-1/3"
+            }`}
+          />
+          <div
+            className={`${
+              imageUrl === "yellow_shoe"
+                ? "w-1/3 hoverBtn btn-hover relative py-8"
+                : "w-1/3 relative py-8"
+            }`}
+          >
             <p className="text-[#fcbc6d] lg:text-5xl font-bold absolute lg:top-16 left-8">
               $265
             </p>
@@ -74,13 +96,27 @@ export default function About() {
           <img
             src="/green_shoe.png"
             alt="green shoe"
-            className="w-1/3 hoverBtn"
+            className={`${
+              imageUrl === "green_shoe" ? "w-1/3 hoverBtn btn-hover" : "w-1/3"
+            }`}
           />
         </div>
         <div className="flex justify-center gap-4 lg:pt-20 pt-8">
-          <button className="rounded-full w-3 h-3 bg-red-500 border border-white border-solid"></button>
-          <button className="rounded-full w-3 h-3 bg-yellow-500 border border-white border-solid"></button>
-          <button className="rounded-full w-3 h-3 bg-green-500 border border-white border-solid"></button>
+          <button
+            className="rounded-full w-3 h-3 bg-red-500 border border-white border-solid cursor-pointer"
+            onMouseEnter={() => handleButtonHover("red_shoe")}
+            onMouseLeave={handleButtonLeave}
+          ></button>
+          <button
+            className="rounded-full w-3 h-3 bg-yellow-500 border border-white border-solid cursor-pointer"
+            onMouseEnter={() => handleButtonHover("yellow_shoe")}
+            onMouseLeave={handleButtonLeave}
+          ></button>
+          <button
+            className="rounded-full w-3 h-3 bg-green-500 border border-white border-solid cursor-pointer"
+            onMouseEnter={() => handleButtonHover("green_shoe")}
+            onMouseLeave={handleButtonLeave}
+          ></button>
         </div>
       </div>
     </main>
