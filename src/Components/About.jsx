@@ -4,9 +4,9 @@ import { HiCheck } from "react-icons/hi";
 export default function About() {
   return (
     <main className="bg-[#f9f9f9]">
-      <div className="max-w-[1600px] mx-auto pt-24" id="about">
+      <div className="max-w-[1600px] mx-auto lg:pt-24" id="about">
         <div className="lg:flex items-center justify-center lg:h-[35rem] my-24">
-          <div className="bg-white shadow-2xl lg:w-1/3 pl-16 h-full flex flex-col justify-center">
+          <div className="bg-white shadow-2xl lg:w-1/3 lg:px-0 px-4 lg:pl-16 h-full flex flex-col justify-center">
             <h1 className="lg:text-4xl text-2xl font-semibold font-poppins py-8">
               adidas <br />
               Alphabounce

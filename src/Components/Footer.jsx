@@ -3,7 +3,7 @@ import { FaGooglePlusG, FaFacebookF, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="footer-bg lg:px-16 px-8 lg:pt-24 pt-12 pb-8">
+    <footer className="footer-bg xl:px-16 px-8 lg:pt-24 pt-12 pb-8">
       <section className="max-w-[1600px] lg:w-4/5 mx-auto">
         <div className="flex justify-between items-baseline gap-x-20 flex-wrap max-lg:flex-col pb-12 border-0 border-solid border-b-2 border-b-[#535250]">
           <div className="flex flex-col items-start lg:w-1/5 lg:pb-0 pb-8">

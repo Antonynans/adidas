@@ -4,9 +4,9 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 /* eslint-disable react/no-unescaped-entities */
 export default function Cart() {
   return (
-    <div className="pt-24" id="cart">
-      <div className="lg:flex items-end justify-between max-w-[1600px] mx-auto pb-24 lg:h-[40rem]">
-        <div className="lg:w-2/3  flex items-end relative h-60">
+    <div className="pt-16" id="cart">
+      <div className="lg:flex items-end justify-between gap-x-12 max-w-[1600px] mx-auto pb-24 lg:h-[40rem]">
+        <div className="lg:w-2/3 flex items-end relative h-full">
           <img
             src="/Main.png"
             alt="adidas shoe"
@@ -18,7 +18,7 @@ export default function Cart() {
             className="absolute bottom-0 left-0 w-full h-full opacity-5 flip_image"
           />
         </div>
-        <div className="lg:w-1/4 lg:py-0 py-8 lg:px-0 px-4 lg:mr-[10%]">
+        <div className="lg:w-[30rem] lg:py-0 py-8 lg:px-0 px-4 lg:mr-[10%]">
           <h2 className="lg:text-3xl pb-4 font-semibold">
             Support and ultralight comfort zone is guaranteed
           </h2>
@@ -48,7 +48,7 @@ export default function Cart() {
               SHOP NOW
             </button>
           </div>
-          <div className="xl:w-[70rem] lg:w-[50rem] w-[30rem] absolute lg:-bottom-24 -bottom-8 lg:-right-56 right-0">
+          <div className="xl:w-[70rem] lg:w-[50rem] w-80 absolute lg:-bottom-24 -bottom-8 lg:-right-56 right-0">
             <img src="/Main2.png" alt="adidas shoe1" className="w-full" />
           </div>
         </div>
