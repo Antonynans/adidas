@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500;600;700&display=swap")
+  @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+p,
+h1,
+h2 {
+  color: #322515;
+}
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+.background {
+  background: linear-gradient(to right, #f5ba6e, #f9cf95);
+}
+.bg-slide {
+  background: linear-gradient(to right, #322b23, #342b22);
+}
+.footer-bg {
+  background: linear-gradient(to right, #322b23, #332c22);
+}
+.rotate {
+  transform: rotate(-22deg);
+}
+
+.hoverBtn {
+  transition: all 0.4s ease 0s !important;
+}
+.hoverBtn:hover {
+  transform: scale(1.25);
+  overflow: hidden !important;
+}
+.flip_image {
+  transform: scaleX(-1);
+}
+
+/* button {
+  cursor: pointer;
+} */
+/* 
+.shadow-3xl {
+  --tw-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  --tw-shadow-colored: 0 10px 40px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+ */
