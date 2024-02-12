@@ -1,8 +1,59 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/no-unescaped-entities */
+import { useRef } from "react";
 import { HiPlus } from "react-icons/hi";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
-/* eslint-disable react/no-unescaped-entities */
+const responsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 3000 },
+    items: 3,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+  },
+  module: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
+
 export default function Cart() {
+  const carouselRef = useRef();
+
+  const handleNext = () => {
+    carouselRef.current.next();
+  };
+  const handlePrevious = () => {
+    carouselRef.current.previous();
+  };
+
+  const Card = ({ title, image }) => {
+    return (
+      <div className="lg:w-full bg-white px-4 py-8 hoverBtn">
+        <img src="/Main.png" alt="" className="w-full" />
+        <p className="text-2xl font-poppins font-semibold pb-12">{title}</p>
+        <span className="flex justify-between items-center">
+          <p className="text-3xl font-semibold font-poppins">$265</p>
+          <button className="bg-black w-12 h-12 rounded-md outline-none border-none cursor-pointer">
+            <HiPlus className="text-3xl text-[#f5ba6e]" />
+          </button>
+        </span>
+        <img
+          src={image}
+          alt="logo image"
+          className="absolute bottom-0 w-full h-1/2 opacity-5 flip_image"
+        />
+      </div>
+    );
+  };
   return (
     <div className="pt-16" id="cart">
       <div className="lg:flex items-end justify-between gap-x-12 max-w-[1600px] mx-auto pb-24 lg:h-[40rem]">
@@ -27,7 +78,7 @@ export default function Cart() {
             was joined by his elder brother Rudolf Molded EVA midsole plug.
           </p>
           <h2 className="text-5xl font-bold py-8">$265</h2>
-          <button className="bg-black text-[#f5ba6e] lg:w-2/3 h-16 lg:px-0 px-8 text-lg outline-none rounded-md border-none cursor-pointer">
+          <button className="bg-black text-[#f5ba6e] lg:w-2/3 h-16 lg:px-0 px-8 text-lg outline-none rounded-md border-none button-hover">
             ADD TO CART
           </button>
         </div>
@@ -44,7 +95,7 @@ export default function Cart() {
               he was joined by his elder brother Rudolf in 1924 under the foot
               name Dassler Brothers Shoe Factory.
             </p>
-            <button className="bg-black text-[#f5ba6e] mt-8 lg:w-1/3 h-16 lg:px-0 px-8 text-lg outline-none rounded-md border-none cursor-pointer">
+            <button className="bg-black text-[#f5ba6e] mt-8 lg:w-1/3 h-16 lg:px-0 px-8 text-lg outline-none rounded-md border-none button-hover">
               SHOP NOW
             </button>
           </div>
@@ -67,66 +118,48 @@ export default function Cart() {
               is was joined there feet.
             </p>
             <span className="flex gap-x-4 mt-8">
-              <button className="bg-black rounded-full border-none outline-none cursor-pointer w-12 h-12">
+              <button
+                className="bg-black rounded-full border-none outline-none cursor-pointer w-12 h-12"
+                onClick={handlePrevious}
+              >
                 <IoIosArrowBack className="text-2xl text-[#f5ba6e] " />
               </button>
-              <button className="bg-black rounded-full border-none outline-none cursor-pointer w-12 h-12">
+              <button
+                className="bg-black rounded-full border-none outline-none cursor-pointer w-12 h-12"
+                onClick={handleNext}
+              >
                 <IoIosArrowForward className="text-2xl text-[#f5ba6e] " />
               </button>
+              {/* <ButtonGroup next={next} /> */}
             </span>
           </div>
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 w-full lg:pt-0 pt-12">
-            <div className="lg:w-full bg-white px-4 py-8 relative overflow-hidden">
-              <img src="/Main.png" alt="" className="w-full" />
-              <p className="text-2xl font-poppins font-semibold pb-12">
-                Air Retront 1 Retro High Pine Golden
-              </p>
-              <span className="flex justify-between items-center">
-                <p className="text-3xl font-semibold font-poppins">$265</p>
-                <button className="bg-black w-12 h-12 rounded-md outline-none border-none cursor-pointer">
-                  <HiPlus className="text-3xl text-[#f5ba6e]" />
-                </button>
-              </span>
-              <img
-                src="/logo-black.png"
-                alt="logo image"
-                className="absolute bottom-0 w-full h-1/2 opacity-5 flip_image"
+          <div className="w-full lg:pt-0 pt-12 overflow-hidden relative">
+            <Carousel
+              swipeable={true}
+              draggable={false}
+              responsive={responsive}
+              ssr={true} // means to render carousel on server-side.
+              infinite
+              arrows={false}
+              keyBoardControl={true}
+              renderButtonGroupOutside={true}
+              ref={carouselRef}
+            >
+              <Card
+                title="Air Retront 1 Retro High Pine Golden"
+                image="/logo-black.png"
               />
-            </div>
-            <div className="lg:w-full bg-white px-4 py-8 relative overflow-hidden">
-              <img src="/green_shoe.png" alt="" className="flip_image w-full" />
-              <p className="text-2xl font-poppins font-semibold pb-12">
-                Air Retront 1 Retro High Pine Green
-              </p>
-              <span className="flex justify-between items-center">
-                <p className="text-3xl font-semibold font-poppins">$265</p>
-                <button className="bg-black w-12 h-12 rounded-md outline-none border-none cursor-pointer">
-                  <HiPlus className="text-3xl text-[#f5ba6e]" />
-                </button>
-              </span>
-              <img
-                src="/logo-black.png"
-                alt="logo image"
-                className="absolute bottom-0 w-full h-1/2 opacity-5 flip_image"
+
+              <Card
+                title="Air Retront 1 Retro High Pine Green"
+                image="/logo-black.png"
               />
-            </div>
-            <div className="lg:w-full bg-white px-4 py-8 relative overflow-hidden">
-              <img src="/red_shoe.png" alt="" className="flip_image w-full" />
-              <p className="text-2xl font-poppins font-semibold pb-12">
-                Air Retront 1 Retro High Pine Red
-              </p>
-              <span className="flex justify-between items-center">
-                <p className="text-3xl font-semibold font-poppins">$265</p>
-                <button className="bg-black w-12 h-12 rounded-md outline-none border-none cursor-pointer">
-                  <HiPlus className="text-3xl text-[#f5ba6e]" />
-                </button>
-              </span>
-              <img
-                src="/logo-black.png"
-                alt="logo image"
-                className="absolute bottom-0 w-full h-1/2 opacity-5 flip_image"
+
+              <Card
+                title="Air Retront 1 Retro High Pine Red"
+                image="/logo-black.png"
               />
-            </div>
+            </Carousel>
           </div>
         </div>
       </section>

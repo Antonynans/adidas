@@ -4,7 +4,7 @@ export default function Hero() {
     <main className="background pt-24 relative overflow-x-clip" id="home">
       <div className="max-w-[1600px] mx-auto xl:flex ">
         <div className="xl:w-1/2 pb-24 pt-9 relative">
-          <div className="xl:ml-[20%] xl:w-auto md:w-1/2 xl:px-0 px-4">
+          <div className="xl:ml-[20%] xl:w-auto md:w-1/2 xl:px-0 px-4 relative z-10">
             <p className="text-[#be863b] text-2xl font-semibold">2018</p>
             <h1 className="xl:text-[90px] md:text-6xl text-3xl leading-none font-semibold font-poppins py-8">
               adidas <br />
@@ -16,7 +16,7 @@ export default function Hero() {
               he was joined by his elder brother Rudolf in 1924 under the foot
               name Dassler Brothers Shoe Factory.
             </p>
-            <button className="bg-black text-[#f5ba6e] mt-8 lg:w-1/2 h-16 lg:px-0 px-8 text-lg outline-none rounded-md border-none cursor-pointer">
+            <button className="bg-black text-[#f5ba6e] mt-8 lg:w-1/2 h-16 lg:px-0 px-8 text-lg outline-none rounded-md cursor-pointer button-hover">
               SHOP NOW
             </button>
           </div>

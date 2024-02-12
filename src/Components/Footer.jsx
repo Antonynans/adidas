@@ -16,7 +16,7 @@ export default function Footer() {
             </a>
 
             <div className="flex items-center gap-5">
-              <FaGooglePlusG className="text-2xl text-white" />
+              <FaGooglePlusG className="text-4xl text-white" />
               <FaFacebookF className="text-2xl text-white" />
               <FaTwitter className="text-2xl text-white" />
             </div>

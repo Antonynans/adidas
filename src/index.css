@@ -33,13 +33,25 @@ h2 {
 
 .hoverBtn {
   transition: all 0.4s ease 0s !important;
+  cursor: pointer;
 }
 .hoverBtn:hover {
-  transform: scale(1.25);
+  transform: scale(1.15);
   overflow: hidden !important;
 }
 .flip_image {
   transform: scaleX(-1);
+}
+
+.button-hover {
+  transition: all 0.4s ease 0s !important;
+  cursor: pointer;
+  border: none;
+}
+.button-hover:hover {
+  background-color: transparent;
+  border: 1.5px solid black;
+  color: black;
 }
 
 /* button {
