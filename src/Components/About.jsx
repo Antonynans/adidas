@@ -119,10 +119,10 @@ export default function About() {
             <img
               src="/red_shoe.png"
               alt="red shoe"
-              className="w-full py-8 hoverBtn btn-hover"
+              className="w-full py-8 hoverBtn"
             />
           </div>
-          <div className="w-full hoverBtn btn-hover relative py-8">
+          <div className="w-full hoverBtn relative py-8">
             <p className="text-[#fcbc6d] lg:text-5xl font-bold absolute lg:top-16 left-8">
               $265
             </p>
@@ -132,7 +132,7 @@ export default function About() {
             <img
               src="/green_shoe.png"
               alt="green shoe"
-              className="w-full py-8 hoverBtn btn-hover"
+              className="w-full py-8 hoverBtn"
             />
           </div>
 
