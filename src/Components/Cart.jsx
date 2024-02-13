@@ -37,7 +37,7 @@ export default function Cart() {
 
   const Card = ({ title, image }) => {
     return (
-      <div className="lg:w-full bg-white px-4 py-8">
+      <div className="lg:w-[96%] bg-white px-4 py-8 relative">
         <img src="/Main.png" alt="" className="w-full" />
         <p className="text-2xl font-semibold pb-12">{title}</p>
         <span className="flex justify-between items-center">
@@ -49,7 +49,7 @@ export default function Cart() {
         <img
           src={image}
           alt="logo image"
-          className="absolute bottom-0 w-full h-1/2 opacity-5 flip_image"
+          className="absolute lg:px-4 bottom-0 w-full h-1/2 opacity-5 flip_image"
         />
       </div>
     );
@@ -110,9 +110,7 @@ export default function Cart() {
       >
         <div className="max-w-[1600px] mx-auto lg:flex pr-8 lg:px-0 px-8 gap-x-8">
           <div className="lg:w-96">
-            <h2 className="lg:text-5xl font-semibold">
-              Colors Available
-            </h2>
+            <h2 className="lg:text-5xl font-semibold">Colors Available</h2>
             <p className="font-semibold leading-8 text-[17px] py-8">
               The company was started by Adolf Dassler in his mother's house he
               is was joined there feet.
@@ -133,14 +131,14 @@ export default function Cart() {
               {/* <ButtonGroup next={next} /> */}
             </span>
           </div>
-          <div className="w-full lg:pt-0 pt-12 overflow-hidden relative">
+          <div className="w-full lg:pt-0 pt-12 overflow-hidden">
             <Carousel
               swipeable={true}
               draggable={false}
               responsive={responsive}
               ssr={true} // means to render carousel on server-side.
               infinite
-              autoPlay={true}
+              // autoPlay={true}
               arrows={false}
               keyBoardControl={true}
               renderButtonGroupOutside={true}
