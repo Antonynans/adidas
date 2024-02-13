@@ -1,23 +1,51 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
 import { HiCheck } from "react-icons/hi";
-
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 /* eslint-disable react/no-unescaped-entities */
+
+const responsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 3000 },
+    items: 3,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+  },
+  module: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
+
+const CustomDots = ({ index, onClick }) => {
+  return (
+    <li className="pl-8" onClick={onClick}>
+      {index === 0 && (
+        <button className="rounded-full w-3 h-3 bg-red-500 border border-white border-solid cursor-pointer"></button>
+      )}
+      {index === 1 && (
+        <button className="rounded-full w-3 h-3 bg-yellow-500 border border-white border-solid cursor-pointer"></button>
+      )}
+      {index === 2 && (
+        <button className="rounded-full w-3 h-3 bg-green-500 border border-white border-solid cursor-pointer"></button>
+      )}
+    </li>
+  );
+};
+
 export default function About() {
-  const [imageUrl, setImageUrl] = useState("");
-
-  const handleButtonHover = (url) => {
-    setImageUrl(url);
-  };
-  const handleButtonLeave = () => {
-    setImageUrl("");
-  };
-
   return (
     <main className="bg-[#f9f9f9]">
       <div className="max-w-[1600px] mx-auto lg:pt-24" id="about">
         <div className="lg:flex items-center justify-center lg:h-[35rem] my-24">
           <div className="bg-white shadow-2xl lg:w-1/3 lg:px-0 px-4 lg:pl-16 h-full flex flex-col justify-center">
-            <h1 className="lg:text-4xl text-2xl font-semibold font-poppins py-8">
+            <h1 className="lg:text-4xl text-2xl font-semibold py-8">
               adidas <br />
               Alphabounce
             </h1>
@@ -72,52 +100,44 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div className="bg-slide py-40 lg:overflow-hidden" id="features">
-        <div className="flex flex-1 items-center  ">
-          <img
-            src="/red_shoe.png"
-            alt="red shoe"
-            className={`${
-              imageUrl === "red_shoe" ? "w-1/3 hoverBtn btn-hover" : "w-1/3"
-            }`}
-          />
-          <div
-            className={`${
-              imageUrl === "yellow_shoe"
-                ? "w-1/3 hoverBtn btn-hover relative py-8"
-                : "w-1/3 relative py-8"
-            }`}
-          >
+      <div className="bg-slide py-24 lg:overflow-hidden" id="features">
+        <Carousel
+          swipeable={true}
+          draggable={false}
+          responsive={responsive}
+          ssr={true} // means to render carousel on server-side.
+          infinite
+          autoPlay={true}
+          arrows={false}
+          showDots={true}
+          customDot={<CustomDots />}
+          keyBoardControl={true}
+          renderButtonGroupOutside={true}
+          className="py-12"
+        >
+          <div className="w-full">
+            <img
+              src="/red_shoe.png"
+              alt="red shoe"
+              className="w-full py-8 hoverBtn btn-hover"
+            />
+          </div>
+          <div className="w-full hoverBtn btn-hover relative py-8">
             <p className="text-[#fcbc6d] lg:text-5xl font-bold absolute lg:top-16 left-8">
               $265
             </p>
             <img src="/Main2.png" alt="yellow shoe" className="w-full" />
           </div>
-          <img
-            src="/green_shoe.png"
-            alt="green shoe"
-            className={`${
-              imageUrl === "green_shoe" ? "w-1/3 hoverBtn btn-hover" : "w-1/3"
-            }`}
-          />
-        </div>
-        <div className="flex justify-center gap-4 lg:pt-20 pt-8">
-          <button
-            className="rounded-full w-3 h-3 bg-red-500 border border-white border-solid cursor-pointer"
-            onMouseEnter={() => handleButtonHover("red_shoe")}
-            onMouseLeave={handleButtonLeave}
-          ></button>
-          <button
-            className="rounded-full w-3 h-3 bg-yellow-500 border border-white border-solid cursor-pointer"
-            onMouseEnter={() => handleButtonHover("yellow_shoe")}
-            onMouseLeave={handleButtonLeave}
-          ></button>
-          <button
-            className="rounded-full w-3 h-3 bg-green-500 border border-white border-solid cursor-pointer"
-            onMouseEnter={() => handleButtonHover("green_shoe")}
-            onMouseLeave={handleButtonLeave}
-          ></button>
-        </div>
+          <div className="w-full">
+            <img
+              src="/green_shoe.png"
+              alt="green shoe"
+              className="w-full py-8 hoverBtn btn-hover"
+            />
+          </div>
+
+          {/* </div> */}
+        </Carousel>
       </div>
     </main>
   );

@@ -6,7 +6,7 @@ export default function Hero() {
         <div className="xl:w-1/2 pb-24 pt-9 relative">
           <div className="xl:ml-[20%] xl:w-auto md:w-1/2 xl:px-0 px-4 relative z-10">
             <p className="text-[#be863b] text-2xl font-semibold">2018</p>
-            <h1 className="xl:text-[90px] md:text-6xl text-3xl leading-none font-semibold font-poppins py-8">
+            <h1 className="xl:text-[90px] md:text-6xl text-3xl leading-none font-semibold py-8">
               adidas <br />
               Alphabounce
             </h1>

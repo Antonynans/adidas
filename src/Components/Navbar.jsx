@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className="lg:w-full w-11/12 mx-auto h-full flex justify-between items-center">
           <div className="flex flex-col gap-y-4 lg:w-1/3">
             <span className="flex items-center gap-x-2 font-bold text-2xl">
-              {/* <h1 className="font-poppins text-white text-3xl">
+              {/* <h1 className="text-white text-3xl">
                 GOTO
                 <span className="text-[#ce8a5c]">EGYPT.</span>
               </h1> */}
@@ -27,31 +27,31 @@ const Navbar = () => {
           <ul className="flex-1 flex justify-end items-center gap-16 max-lg:hidden">
             <a
               href="#home"
-              className="leading-normal font-poppins no-underline text-[#8b6c47]"
+              className="leading-normal no-underline text-[#8b6c47]"
             >
               Home
             </a>
             <a
               href="#about"
-              className="leading-normal font-poppins no-underline text-[#8b6c47]"
+              className="leading-normal no-underline text-[#8b6c47]"
             >
               About
             </a>
             <a
               href="#colors"
-              className="leading-normal font-poppins no-underline text-[#8b6c47]"
+              className="leading-normal no-underline text-[#8b6c47]"
             >
               Colors
             </a>
             <a
               href="#features"
-              className="leading-normal font-poppins no-underline text-[#8b6c47]"
+              className="leading-normal no-underline text-[#8b6c47]"
             >
               Features
             </a>
             <a
               href="#cart"
-              className="leading-normal font-poppins no-underline text-[#8b6c47]"
+              className="leading-normal no-underline text-[#8b6c47]"
             >
               Cart
             </a>
@@ -83,31 +83,31 @@ const Navbar = () => {
               <ul className="text-center p-0 flex flex-col justify-center w-full gap-y-8">
                 <a
                   href="#home"
-                  className="leading-normal font-poppins no-underline text-[#8b6c47]"
+                  className="leading-normal no-underline text-[#8b6c47]"
                 >
                   Home
                 </a>
                 <a
                   href="#about"
-                  className="leading-normal font-poppins no-underline text-[#8b6c47]"
+                  className="leading-normal no-underline text-[#8b6c47]"
                 >
                   About
                 </a>
                 <a
                   href="#colors"
-                  className="leading-normal font-poppins no-underline text-[#8b6c47]"
+                  className="leading-normal no-underline text-[#8b6c47]"
                 >
                   Colors
                 </a>
                 <a
                   href="#features"
-                  className="leading-normal font-poppins no-underline text-[#8b6c47]"
+                  className="leading-normal no-underline text-[#8b6c47]"
                 >
                   Features
                 </a>
                 <a
                   href="#cart"
-                  className="leading-normal font-poppins no-underline text-[#8b6c47]"
+                  className="leading-normal no-underline text-[#8b6c47]"
                 >
                   Cart
                 </a>

@@ -37,11 +37,11 @@ export default function Cart() {
 
   const Card = ({ title, image }) => {
     return (
-      <div className="lg:w-full bg-white px-4 py-8 hoverBtn">
+      <div className="lg:w-full bg-white px-4 py-8">
         <img src="/Main.png" alt="" className="w-full" />
-        <p className="text-2xl font-poppins font-semibold pb-12">{title}</p>
+        <p className="text-2xl font-semibold pb-12">{title}</p>
         <span className="flex justify-between items-center">
-          <p className="text-3xl font-semibold font-poppins">$265</p>
+          <p className="text-3xl font-semibold">$265</p>
           <button className="bg-black w-12 h-12 rounded-md outline-none border-none cursor-pointer">
             <HiPlus className="text-3xl text-[#f5ba6e]" />
           </button>
@@ -86,7 +86,7 @@ export default function Cart() {
       <section className="background relative py-32 overflow-x-clip">
         <div className="max-w-[1600px] mx-auto flex items-center">
           <div className="lg:ml-[10%] lg:px-0 px-4">
-            <h2 className="lg:text-4xl font-semibold font-poppins py-8">
+            <h2 className="lg:text-4xl font-semibold py-8">
               Buy The adidas Alphabounce Now!
             </h2>
             <p className="font-semibold leading-8 text-[17px] lg:w-2/3">
@@ -110,7 +110,7 @@ export default function Cart() {
       >
         <div className="max-w-[1600px] mx-auto lg:flex pr-8 lg:px-0 px-8 gap-x-8">
           <div className="lg:w-96">
-            <h2 className="lg:text-5xl font-poppins font-semibold">
+            <h2 className="lg:text-5xl font-semibold">
               Colors Available
             </h2>
             <p className="font-semibold leading-8 text-[17px] py-8">
@@ -140,6 +140,7 @@ export default function Cart() {
               responsive={responsive}
               ssr={true} // means to render carousel on server-side.
               infinite
+              autoPlay={true}
               arrows={false}
               keyBoardControl={true}
               renderButtonGroupOutside={true}
