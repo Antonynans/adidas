@@ -138,7 +138,7 @@ export default function Cart() {
               responsive={responsive}
               ssr={true} // means to render carousel on server-side.
               infinite
-              // autoPlay={true}
+              autoPlay={true}
               arrows={false}
               keyBoardControl={true}
               renderButtonGroupOutside={true}
